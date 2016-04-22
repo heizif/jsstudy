@@ -26,8 +26,15 @@
 		window.onload = function  () {
 			var  op = document.getElementsByTagName("p");
 			var  oul = document.getElementsByTagName("ul");
+			var off = true;
 			op[0].onclick = function  () {
-				 oul[0].style.display = "none";
+				if (off) {
+					oul[0].style.display = "none";
+					off = false;
+				}else{
+					oul[0].style.display = "block";
+					off = true;
+				}
 			}
 		}
 	</SCRIPT>
